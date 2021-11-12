@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cambio de divisas"
+        android:layout_marginVertical="10dp"
+        android:layout_marginLeft="100dp"
+        android:textStyle="bold"
+        android:textSize="25dp"/>
+
+    <Spinner
+        android:id="@+id/lisDiv"
+        android:layout_width="128dp"
+        android:layout_height="40dp"
+        android:layout_gravity="start"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="100dp"
+        android:layout_weight="1" />
+
+    <Spinner
+        android:id="@+id/lisDiv2"
+        android:layout_width="127dp"
+        android:layout_height="40dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="100dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="95dp"
+        android:src="@drawable/divimg"/>
+
+    <RadioGroup
+        android:layout_width="388dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:background="@drawable/customborder"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:width="310dp"
+            android:background="#d8d8d8"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="Cantidad a convertir"
+            android:inputType="number"
+            android:selectAllOnFocus="false"
+            android:singleLine="false"></EditText>
+
+        <Button
+            android:id="@+id/btnconvert"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:text="Convertir" />
+
+        <TextView
+            android:id="@+id/edt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:width="310dp"
+            android:background="#d8d8d8"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="Cantidad convertida"
+            android:inputType="number"
+            android:textSize="18dp"
+            android:selectAllOnFocus="false"
+            android:singleLine="false"></TextView>
+
+    </RadioGroup>
+
+</FrameLayout>
