@@ -50,7 +50,7 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/edt1"
+            android:id="@+id/edtFrom"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -59,20 +59,21 @@
             android:width="310dp"
             android:background="#d8d8d8"
             android:backgroundTint="@android:color/transparent"
-            android:hint="Cantidad a convertir"
+            android:hint="@string/edt1From"
             android:inputType="number"
             android:selectAllOnFocus="false"
-            android:singleLine="false"></EditText>
+            android:singleLine="false"/>
+
 
         <TextView
             android:id="@+id/txtFrom"
-            android:layout_width="60dp"
-            android:layout_height="20dp"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
             android:layout_gravity="end"
-            android:layout_marginRight="40dp"
-            android:layout_marginTop="-24dp"
-            android:text="" />
-
+            android:layout_marginTop="-25dp"
+            android:layout_marginRight="60dp"
+            android:text=""
+            android:textSize="18dp"/>
 
         <Button
             android:id="@+id/btnconvert"
@@ -80,10 +81,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
+            android:onClick="convertBtn"
             android:text="Convertir" />
 
         <TextView
-            android:id="@+id/edt2"
+            android:id="@+id/txtTo"
             android:layout_width="249dp"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
@@ -96,7 +98,7 @@
             android:inputType="number"
             android:selectAllOnFocus="false"
             android:singleLine="false"
-            android:textSize="18dp"></TextView>
+            android:textSize="18dp"/>
 
     </RadioGroup>
 
