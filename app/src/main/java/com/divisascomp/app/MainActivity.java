@@ -12,9 +12,11 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 
 public class MainActivity extends AppCompatActivity {
-
+    DecimalFormat df = new DecimalFormat("#0.00");
     Spinner listDiv, listDiv2;
     TextView txtFrom, txtTo;
     EditText edt1From;
@@ -62,8 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
     }
 
 
@@ -93,11 +93,11 @@ public class MainActivity extends AppCompatActivity {
         select2 = listDiv2.getSelectedItem().toString();
         if(select.equals("COP $")&&select2.equals("USD $")){
             cambio= mon1 / 3900;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }else if (select.equals("USD $")&&select2.equals("COP $")){
             cambio= mon1 * 3900;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }
     }
@@ -107,11 +107,11 @@ public class MainActivity extends AppCompatActivity {
         select2 = listDiv2.getSelectedItem().toString();
         if(select.equals("COP $")&&select2.equals("AUD A$")){
             cambio= mon1 / 2847.08;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }else if (select.equals("AUD A$")&&select2.equals("COP $")){
             cambio= mon1 * 2847.08;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }
     }
@@ -121,11 +121,11 @@ public class MainActivity extends AppCompatActivity {
         select2 = listDiv2.getSelectedItem().toString();
         if(select.equals("COP $")&&select2.equals("JPY ¥")){
             cambio= mon1 / 34.09;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }else if (select.equals("JPY ¥")&&select2.equals("COP $")){
             cambio= mon1 * 34.09;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }
     }
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         select2 = listDiv2.getSelectedItem().toString();
         if(select.equals("COP $")&&select2.equals("KRW ₩")){
             cambio = mon1 / 3;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }else if (select.equals("KRW ₩")&&select2.equals("COP $")){
             cambio = mon1 * 3;
@@ -148,11 +148,11 @@ public class MainActivity extends AppCompatActivity {
         select2 = listDiv2.getSelectedItem().toString();
         if(select.equals("USD $")&&select2.equals("AUD A$")){
             cambio= mon1 / 0.73;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }else if (select.equals("AUD A$")&&select2.equals("USD $")){
             cambio= mon1 * 0.73;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }
     }
@@ -162,11 +162,11 @@ public class MainActivity extends AppCompatActivity {
         select2 = listDiv2.getSelectedItem().toString();
         if(select.equals("USD $")&&select2.equals("JPY ¥")){
             cambio= mon1 / 0.0088;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }else if (select.equals("JPY ¥")&&select2.equals("USD $")){
             cambio= mon1 * 0.0088;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }
     }
@@ -176,11 +176,11 @@ public class MainActivity extends AppCompatActivity {
         select2 = listDiv2.getSelectedItem().toString();
         if(select.equals("USD $")&&select2.equals("KRW ₩")){
             cambio= mon1 / 0.00085;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }else if (select.equals("KRW ₩")&&select2.equals("USD $")){
             cambio= mon1 * 0.00085;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }
     }
@@ -190,11 +190,11 @@ public class MainActivity extends AppCompatActivity {
         select2 = listDiv2.getSelectedItem().toString();
         if(select.equals("AUD A$")&&select2.equals("JPY ¥")){
             cambio= mon1 / 0.012;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }else if (select.equals("JPY ¥")&&select2.equals("AUD A$")){
             cambio= mon1 * 0.012;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }
     }
@@ -204,11 +204,11 @@ public class MainActivity extends AppCompatActivity {
         select2 = listDiv2.getSelectedItem().toString();
         if(select.equals("AUD A$")&&select2.equals("KRW ₩")){
             cambio= mon1 / 0.0012;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }else if (select.equals("KRW ₩")&&select2.equals("AUD A$")){
             cambio= mon1 * 0.0012;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }
     }
@@ -218,11 +218,11 @@ public class MainActivity extends AppCompatActivity {
         select2 = listDiv2.getSelectedItem().toString();
         if(select.equals("JPY ¥")&&select2.equals("KRW ₩")){
             cambio= mon1 / 0.097;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }else if (select.equals("KRW ₩")&&select2.equals("JPY ¥")){
             cambio= mon1 * 0.097;
-            cambioc = (cambio) + "  " +to;
+            cambioc = df.format(cambio) + "  " +to;
             txtTo.setText(cambioc);
         }
     }
