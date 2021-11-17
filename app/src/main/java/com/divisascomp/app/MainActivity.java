@@ -39,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
                 selectedItemSpinner1 = position;
                 from = parent.getItemAtPosition(position).toString();
                 txtFrom.setText(from);
+                if(!txtTo.getText().equals("")){
+                    resetInputs(view);
+                }
             }
 
             @Override
@@ -52,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 selectedItemSpinner2 = position;
                 to = parent.getItemAtPosition(position).toString();
+                if(!txtTo.getText().equals("")){
+                    resetInputs(view);
+                }
             }
 
             @Override
@@ -64,6 +70,11 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    public  void resetInputs(View view){
+        edt1From.setText("");
+        txtTo.setText("");
     }
 
 
