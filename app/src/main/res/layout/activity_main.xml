@@ -50,19 +50,30 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/edt1"
-            android:layout_width="wrap_content"
+            android:id="@+id/edtFrom"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="start"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="50dp"
             android:width="310dp"
             android:background="#d8d8d8"
             android:backgroundTint="@android:color/transparent"
-            android:hint="Cantidad a convertir"
+            android:hint="@string/edt1From"
             android:inputType="number"
             android:selectAllOnFocus="false"
-            android:singleLine="false"></EditText>
+            android:singleLine="false"/>
+
+
+        <TextView
+            android:id="@+id/txtFrom"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="-25dp"
+            android:layout_marginRight="60dp"
+            android:text=""
+            android:textSize="18dp"/>
 
         <Button
             android:id="@+id/btnconvert"
@@ -70,23 +81,24 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
+            android:onClick="convertBtn"
             android:text="Convertir" />
 
         <TextView
-            android:id="@+id/edt2"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtTo"
+            android:layout_width="249dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="start"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="35dp"
-            android:layout_gravity="center"
             android:width="310dp"
             android:background="#d8d8d8"
             android:backgroundTint="@android:color/transparent"
             android:hint="Cantidad convertida"
             android:inputType="number"
-            android:textSize="18dp"
             android:selectAllOnFocus="false"
-            android:singleLine="false"></TextView>
+            android:singleLine="false"
+            android:textSize="18dp"/>
 
     </RadioGroup>
 
